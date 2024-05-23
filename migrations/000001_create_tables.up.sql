@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS "users" (
+  "id" BIGINT PRIMARY KEY,
+  "first_name" VARCHAR(255) NOT NULL,
+  "last_name" VARCHAR(255) NOT NULL,
+  "username" VARCHAR(40),
+  "is_premium" BOOLEAN NOT NULL DEFAULT FALSE,
+  "language_code" VARCHAR(3) NOT NULL,
+  "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  "updated_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
